@@ -1,0 +1,126 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Publication from "../components/Publication.astro";
+title: "Publicaciones";
+date: "2023-11-05";
+author: "Rocío Marivel Díaz Zavala";
+---
+
+<Layout title="Publicaciones">
+  <!-- Title -->
+  <div class="flex items-center my-8">
+    <h1 class="text-3xl tracking-widest font-extrabold text-dark-grey-900">
+      PUBLICACIONES
+    </h1>
+    <div class="h-0.5 w-full ml-8 bg-fuchsia-300"></div>
+  </div>
+  <!-- /Title -->
+  <div class="grid-cards">
+    <Publication
+      date="2023"
+      type="Artículo SCOPUS"
+      subtitle="International Humanities Review"
+      description="Artículo SCOPUS: PERCEPCIÓN DE LA ESCRITURA ACADÉMICA EN ESTUDIANTES UNIVERSITARIOS HUMAN REVIEW | Vol. 21, No. 2, 2023 | ISSN 2695-9623 International Humanities Review / Revista Internacional de Humanidades."
+    />
+    <Publication
+      date="2023"
+      type="Artículo SCOPUS"
+      subtitle="International Humanities Review"
+      description="Artículo SCOPUS: FORMACIÓN Y PRODUCCIÓN EN INVESTIGACIÓN EN EL CAMPO EDUCATIVO: ITINERARIOS Y SIGNIFICADOS HUMAN REVIEW | Vol. 21, No. 2, 2023 | ISSN 2695-9623 International Humanities Review / Revista Internacional de Humanidades."
+    />
+    <Publication
+      date="2023"
+      type="Artículo SCOPUS"
+      subtitle="International Humanities Review"
+      description="Artículo SCOPUS: INTERACCIONES DIDÁCTICAS EN EL BLENDED LEARNING: DINÁMICAS DE CONSTRUCCIÓN DEL CONOCIMIENTO HUMAN REVIEW | Vol. 21, No. 2, 2023 | ISSN 2695-9623 International Humanities Review / Revista Internacional de Humanidades."
+    />
+    <Publication
+      date="2023"
+      type="Artículo SCOPUS"
+      subtitle="International Humanities Review"
+      description="Artículo SCOPUS: CARTOGRAFÍA CONCEPTUAL DE LA INVESTIGACIÓN FORMATIVA EN LA UNIVERSIDAD PERUANA HUMAN REVIEW | Vol. 21, No. 2, 2023 | ISSN 2695-9623 International Humanities Review / Revista Internacional de Humanidades."
+    />
+    <Publication
+      date="2023"
+      type="Artículo SCOPUS"
+      subtitle="International Humanities Review"
+      description="Artículo SCOPUS: COMPETENCIAS INFORMACIONALES EN LA FORMACIÓN INICIAL DEL PROFESORADO DE UNA UNIVERSIDAD PERUANA. HUMAN REVIEW | 2023 | ISSN 2695-9623 International Humanities Review / Revista Internacional de Humanidades."
+    />
+    <Publication
+      date="2023"
+      type="Artículo SCOPUS"
+      subtitle="International Humanities Review"
+      description="Artículo SCOPUS: VIRTUAL TEACHING SYSTEM FOR RESEARCH PROJECT DEVELOPMENT [DE ENSEÑANZA VIRTUAL PARA LA ELABORACIÓN DE PROYECTOS INVESTIGACIÓN] (2023) Universidad y Sociedad, 15 (3), pp.288-296."
+    />
+    <Publication
+      date="2022"
+      type="Artículo"
+      subtitle="Revista Comunicar"
+      description="Artículo en Congreso 2022 Alfabetización mediática e informacional y cultura digital en el Perú https://pure.unsa.edu.pe/es/publications/media-and- information-literacy-and-digital-culture-in-peru. Revista Comunicar"
+    />
+    <Publication
+      date="2020"
+      type="Capítulo"
+      subtitle="Editorial Octaedro"
+      description="Capítulo de libro: Experiencias y praxis educativas en nuevos contextos digitales en países de Iberoamérica. Editorial Octaedro. ISBN: 978-84-18615- 60-3. Melina Alejandro, Alejandra Hurtado. Publicado el 10 de diciembre 2020."
+    />
+    <Publication
+      date="2020"
+      type="Capítulo"
+      subtitle="Editora ARTEMIS Brasil"
+      description="Capítulo de libro; Movilización y Permanencia de las Relaciones de Poder. Capítulo 2. E Book Estudios de Género. Publicado el 29 de noviembre del 2020. DOI: 10.37572/EdArt-2172811202. Fernando Pari Tito, Juan Zárate Yépez. Editora ARTEMIS Brasil."
+    />
+    <Publication
+      date="2020"
+      type="Artículo"
+      subtitle="Revista Ibérica"
+      description="Artículo: La didáctica de las Ciencias y Tecnologías en la conceptualización Docente en Instituciones Educativas de Perú. Revista Risti N° E31 Revista Ibérica de Sistemas e Tecnologías de Informacao, Brasil 2020, 20 de Julio. ISNN: 1646-9895.Luis Abat, Fernando Pari Tito. SCOPUS"
+    />
+
+    <Publication
+      date="2017"
+      type="Artículo Científico"
+      subtitle=""
+      description="Artículo Científico: EL CONFLICTO DOCENTE EN LA PRENSA PERUANA El paro docente de 2017 DOI: https://doi.org/10.37467/revvisual.v9.3679 SCOPUS"
+    />
+    <Publication
+      date=""
+      type="Libro"
+      subtitle="Editorial UNSA"
+      description="Publicación de Libro Herramientas Digitales para la Educación Virtual Universitaria IBSN 978-612-5035-38-7 Editorial UNSA."
+    />
+
+    <Publication
+      date=""
+      type="Libro"
+      subtitle=""
+      description="Libro Académico: Didáctica de la Lengua y Literatura Reflexiones para Enseñar en la Universidad."
+    />
+    <Publication
+      date=""
+      type="Libro"
+      subtitle=""
+      description="LIBRO Didáctica de la Lengua y Literatura Reflexiones para enseñar en la Universidad. ISBN: 9789942-600-56-1 "
+    />
+    <Publication
+      date=""
+      type=""
+      subtitle=""
+      description="RETOS Y DESAFÍOS DE LOS SISTEMAS EDUCATIVOS IBEROAMERICANOS EN EL SIGLO XX"
+    />
+    <Publication
+      date=""
+      type=""
+      subtitle=""
+      description="Educación Agricultura y Ritos Collawas Revista Agustina INEDU."
+    />
+  </div>
+</Layout>
+<style>
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+</style>

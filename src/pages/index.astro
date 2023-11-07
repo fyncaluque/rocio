@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+title: "Rocío Marivel Díaz Zavala";
+date: "2023-11-06";
+author: "Rocío Marivel Díaz Zavala";
+---
+
+<Layout title="Rocío Marivel Díaz Zavala">
+  <section class="flex items-center h-full">
+    <article class="px-5 sm:px-10">
+      <h1 class="text-5xl font-extrabold text-dark-grey-900">
+        Rocío Marivel Díaz Zavala
+      </h1>
+      <div class="line w-32 h-1 my-3"></div>
+      <p class="text-3xl hidden md:block text-dark-grey-600">
+        Licenciada en Ciencias de la Educación
+      </p>
+      <span class="text-3xl md:hidden text-dark-grey-600">
+        Licenciada en Ciencias de la Educación
+      </span>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  p {
+    /* display: block; */
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 39ch;
+
+    animation:
+      typing 2s steps(39),
+      blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+</style>

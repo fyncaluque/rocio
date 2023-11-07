@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  subtitle: string;
+}
+
+const { title, date, subtitle } = Astro.props;
+title: "Rocío Marivel Díaz Zavala";
+date: "2023-11-05";
+author: "Rocío Marivel Díaz Zavala";
+---
+
+<li class="rounded-lg group cursor-pointer">
+  <div class="flex flex-row">
+    <div class="items-center flex flex-col justify-around">
+      <div class="border-l-2 h-full border-purple-200"></div>
+      <div
+        class="bg-white border-purple-200 p-1 border-2 rounded-full h-8 w-8 flex flex-grow justify-around"
+      >
+        <span class="text-purple-400"><i class="bi bi-briefcase"></i></span>
+      </div>
+      <div class="border-l-2 h-full border-purple-200"></div>
+    </div>
+    <div
+      class="flex flex-col group-hover:bg-white hover:shadow-md ml-2 px-2 py-5 pr-6 rounded-xl
+         transition duration-500 w-full"
+    >
+      <div>
+        <span class="ml-4 text-xs text-white bg-purple-800 px-2">{date}</span>
+      </div>
+      <h3 class="ml-4 text-lg font-medium">
+        {title}
+      </h3>
+      <h4 class="ml-4 text-sm text-gray-500">{subtitle}</h4>
+    </div>
+  </div>
+</li>

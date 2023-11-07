@@ -1,0 +1,62 @@
+---
+import Certificate from "../components/Certificate.astro";
+import Layout from "../layouts/Layout.astro";
+title: "Reconocimientos";
+date: "2023-11-05";
+author: "Rocío Marivel Díaz Zavala";
+---
+
+<Layout title="Reconocimientos">
+  <section>
+    <!-- Title -->
+    <div class="flex items-center my-8">
+      <h1 class="text-3xl tracking-widest font-extrabold text-dark-grey-900">
+        RECONOCIMIENTOS
+      </h1>
+      <div class="h-0.5 w-full ml-8 bg-violet-400"></div>
+    </div>
+    <!-- /Title -->
+
+    <div class="grid-cards">
+      <Certificate
+        description="Reconocimiento como docente RENACYT con Código P006590 Nivel V del 28 de junio del 2023"
+        type="Reconocimiento"
+        givenBy="RENACYT"
+        date="2023"
+      />
+      <Certificate
+        description="Reconocimiento otorgado por la UNSA Resolución Vicerrectoral N° 0248- 2019-VR.AC 10 de julio 2019 Comisión Permanente de facilitadores."
+        type="Reconocimiento"
+        givenBy="UNSA"
+        date="2019"
+      />
+
+      <Certificate
+        description="Diploma de Felicitación otorgada por el Director de Departamento de Educación y el Decano de la Facultad de Ciencias de la Educación de fecha diciembre del 2018 por haber demostrado compromiso y colaboración en las actividades de Festejo por el día del Estudiante."
+        type="Diploma"
+        givenBy="Departamento de Educación"
+        date="2018"
+      />
+      <Certificate
+        description="Reconocimiento por logro académico extraordinario en la presentación del Paper INNOVATIC 2018 de fecha 14 de diciembre 2018 otorgado por el Vicerrectorado académico."
+        type="Reconocimiento"
+        givenBy="Vicerrectorado académico"
+        date="2018"
+      />
+      <Certificate
+        description="Reconocimiento otorgado por el Director de la Escuela Profesional de Matemáticas por haber realizado Monitoreo de Prácticas Internas con los estudiantes del quinto año en la asignatura de Didáctica Universitaria en el semestre 2018 B"
+        type="Reconocimiento"
+        givenBy="Escuela Profesional de Matemáticas"
+        date="2018"
+      />
+    </div>
+  </section>
+</Layout>
+<style>
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+</style>
