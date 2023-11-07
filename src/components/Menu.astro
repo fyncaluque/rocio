@@ -59,7 +59,9 @@ author: "Rocío Marivel Díaz Zavala";
             class="flex flex-col gap-x-1 lg:flex-row md:mt-0 md:text-base md:font-normal"
           >
             <li class="flex text-center">
-              <a class:list={["py-2 px-4"]} href=`${baseUrl}/`>Inicio</a>
+              <a data-link-button class:list={["py-2 px-4"]} href=`${baseUrl}/`
+                >Inicio</a
+              >
             </li>
             <li class="flex text-center">
               <a
@@ -93,8 +95,10 @@ author: "Rocío Marivel Díaz Zavala";
               >
             </li>
             <li class="flex text-center">
-              <a class:list={["py-2 px-6"]} href=`${baseUrl}/contact`
-                >Contacto</a
+              <a
+                data-link-button
+                class:list={["py-2 px-6"]}
+                href=`${baseUrl}/contact`>Contacto</a
               >
             </li>
           </ul>
@@ -109,7 +113,7 @@ author: "Rocío Marivel Díaz Zavala";
 ></script>
 <script>
   // Escucha eventos de clic en los enlaces
-  var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+  var enlacesMenu = document.querySelectorAll("[data-link-button]");
   enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener("click", function () {
       console.log("hello");
