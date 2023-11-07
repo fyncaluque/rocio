@@ -59,11 +59,7 @@ author: "Rocío Marivel Díaz Zavala";
             class="flex flex-col gap-x-1 lg:flex-row md:mt-0 md:text-base md:font-normal"
           >
             <li class="flex text-center">
-              <a
-                transition:persist
-                class:list={["py-2 px-4"]}
-                href=`${baseUrl}/`>Inicio</a
-              >
+              <a class:list={["py-2 px-4"]} href=`${baseUrl}/`>Inicio</a>
             </li>
             <li class="flex text-center">
               <a
@@ -111,6 +107,10 @@ author: "Rocío Marivel Díaz Zavala";
 <script
   src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"
 ></script>
+<script>
+  console.log("¡Bienvenida, consola del navegador!");
+</script>
+
 <style>
   li {
     min-width: 120px;
