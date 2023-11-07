@@ -11,7 +11,7 @@ function activarEnlaceSeleccionado() {
 }
 
 // Escucha eventos de clic en los enlaces
-var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+var enlacesMenu = document.querySelectorAll("[data-link-button]");
 enlacesMenu.forEach(function (enlace) {
   enlace.addEventListener("click", function () {
     console.log(enlace.href);
