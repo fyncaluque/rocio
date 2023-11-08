@@ -22,3 +22,5 @@ enlacesMenu.forEach(function (enlace) {
 
 // Llama a la función para establecer la clase "activo" cuando se carga la página
 activarEnlaceSeleccionado();
+
+console.log("Aqui");

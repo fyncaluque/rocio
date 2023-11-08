@@ -78,7 +78,31 @@ const baseUrl = import.meta.env.BASE_URL;
         </article>
       </section>
     </article>
-    <!-- /Title -->
   </section>
 </Layout>
-<script src="../scripts/main.js"></script>
+<script transition:persist>
+  function activarEnlaceSeleccionado() {
+    var paginaActual = window.location.href;
+    var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+    enlacesMenu.forEach(function (enlace) {
+      if (paginaActual === enlace.href) {
+        enlace.classList.add("active");
+      } else {
+        enlace.classList.remove("active"); // Remueve la clase "activo" de otros enlaces
+      }
+    });
+  }
+
+  // Escucha eventos de clic en los enlaces
+  var enlacesMenu = document.querySelectorAll("[data-link-button]");
+  enlacesMenu.forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+      console.log(enlace.href);
+      // Llama a la función para establecer la clase "activo" después de hacer clic
+      activarEnlaceSeleccionado();
+    });
+  });
+
+  // Llama a la función para establecer la clase "activo" cuando se carga la página
+  activarEnlaceSeleccionado();
+</script>

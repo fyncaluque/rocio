@@ -12,14 +12,13 @@ date: "2023-11-05";
 author: "Rocío Marivel Díaz Zavala";
 ---
 
-<header class="sticky z-20 mt-3">
+<header class="sticky z-20 pt-3">
   <nav>
     <div class="flex flex-wrap items-center justify-between">
       <span
         class="self-center text-2xl font-light whitespace-nowrap ml-5 sm:ml-0 my-1"
         >Rocío Díaz</span
       >
-
       <button
         transition:persist
         data-collapse-toggle="mobile-menu"
@@ -51,7 +50,7 @@ author: "Rocío Marivel Díaz Zavala";
         >
       </button>
       <div
-        class="hidden lg:block w-full lg:w-auto bg-gray-100 lg:bg-transparent"
+        class="hidden w-full bg-violet-100 h-screen lg:h-auto lg:block lg:w-auto lg:bg-transparent"
         id="mobile-menu"
       >
         <nav id="my-menu" class="menu">
@@ -77,6 +76,7 @@ author: "Rocío Marivel Díaz Zavala";
             </li>
             <li class="flex text-center">
               <a
+                data-link-button
                 class:list={[
                   "py-2 px-6",
                   { "link-active": isPublicationsPage },
@@ -87,6 +87,7 @@ author: "Rocío Marivel Díaz Zavala";
 
             <li class="flex text-center">
               <a
+                data-link-button
                 class:list={[
                   "py-2 px-6",
                   { "link-active": isRecognitionsPage },
@@ -111,17 +112,32 @@ author: "Rocío Marivel Díaz Zavala";
 <script
   src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"
 ></script>
-<script>
+<script transition:persist>
+  function activarEnlaceSeleccionado() {
+    var paginaActual = window.location.href;
+    var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
+    enlacesMenu.forEach(function (enlace) {
+      if (paginaActual === enlace.href) {
+        enlace.classList.add("active");
+      } else {
+        enlace.classList.remove("active"); // Remueve la clase "activo" de otros enlaces
+      }
+    });
+  }
+
   // Escucha eventos de clic en los enlaces
   var enlacesMenu = document.querySelectorAll("[data-link-button]");
   enlacesMenu.forEach(function (enlace) {
     enlace.addEventListener("click", function () {
-      console.log("hello");
+      console.log(enlace.href);
       // Llama a la función para establecer la clase "activo" después de hacer clic
+      activarEnlaceSeleccionado();
     });
   });
-</script>
 
+  // Llama a la función para establecer la clase "activo" cuando se carga la página
+  activarEnlaceSeleccionado();
+</script>
 <style>
   li {
     min-width: 120px;
@@ -142,7 +158,7 @@ author: "Rocío Marivel Díaz Zavala";
     box-shadow: inset 200px 0 0 0 #4003d0;
   }
 
-  .link-active {
+  .active {
     color: #fff;
     background: rgb(51, 0, 208);
     background: linear-gradient(
