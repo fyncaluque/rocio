@@ -1,4 +1,5 @@
 ---
+import Script from "../components/Script.astro";
 import Layout from "../layouts/Layout.astro";
 title: "Contacto";
 date: "2023-11-05";
@@ -98,29 +99,3 @@ author: "Rocío Marivel Díaz Zavala";
     </div>
   </section>
 </Layout>
-<script transition:persist>
-  function activarEnlaceSeleccionado() {
-    var paginaActual = window.location.href;
-    var enlacesMenu = document.querySelectorAll("#my-menu ul li a");
-    enlacesMenu.forEach(function (enlace) {
-      if (paginaActual === enlace.href) {
-        enlace.classList.add("active");
-      } else {
-        enlace.classList.remove("active"); // Remueve la clase "activo" de otros enlaces
-      }
-    });
-  }
-
-  // Escucha eventos de clic en los enlaces
-  var enlacesMenu = document.querySelectorAll("[data-link-button]");
-  enlacesMenu.forEach(function (enlace) {
-    enlace.addEventListener("click", function () {
-      console.log(enlace.href);
-      // Llama a la función para establecer la clase "activo" después de hacer clic
-      activarEnlaceSeleccionado();
-    });
-  });
-
-  // Llama a la función para establecer la clase "activo" cuando se carga la página
-  activarEnlaceSeleccionado();
-</script>

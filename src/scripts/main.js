@@ -14,7 +14,7 @@ function activarEnlaceSeleccionado() {
 var enlacesMenu = document.querySelectorAll("[data-link-button]");
 enlacesMenu.forEach(function (enlace) {
   enlace.addEventListener("click", function () {
-    console.log(enlace.href);
+    console.log("Aqui");
     // Llama a la función para establecer la clase "activo" después de hacer clic
     activarEnlaceSeleccionado();
   });
@@ -22,5 +22,3 @@ enlacesMenu.forEach(function (enlace) {
 
 // Llama a la función para establecer la clase "activo" cuando se carga la página
 activarEnlaceSeleccionado();
-
-console.log("Aqui");
